@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
+from applications.account.send_mail import send_confirmation_code
 
 User = get_user_model()
 
