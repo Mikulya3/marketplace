@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'applications.account',
     'applications.spam',
 
-
 ]
 
 MIDDLEWARE = [
@@ -155,9 +154,11 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
+    'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 10
 }
 
 BROKER_URL = 'redis://127.0.0.1:6379/0'
