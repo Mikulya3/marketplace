@@ -21,4 +21,6 @@ urlpatterns = [
     path('account/', include('applications.account.urls')),
     path('spam/', include('applications.spam.urls')),
     path('api/v1/product/', include('applications.product.urls')),
+    path('api/v1/order/', include('applications.order.urls')),
+    path('api/v1/feedback/', include('applications.feedback.urls')),
 ]

@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'applications.account',
     'applications.spam',
     'applications.product', 
+    'applications.order',
+    'applications.feedback',
 
 
 ]
