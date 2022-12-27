@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     #my app
     'applications.account',
     'applications.spam',
+    'applications.product', 
 
 
 ]

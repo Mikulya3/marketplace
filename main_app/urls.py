@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('account/', include('applications.account.urls')),
     path('spam/', include('applications.spam.urls')),
+    path('api/v1/product/', include('applications.product.urls')),
 ]
