@@ -7,7 +7,12 @@
     <list default="true" id="505fb2c1-61a1-4d15-8884-4bc4c7705700" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/applications/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/account/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/account/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/account/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/feedback/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/feedback/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/applications/order/send_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/applications/order/send_mail.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

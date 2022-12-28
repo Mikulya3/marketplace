@@ -18,8 +18,8 @@ class RegisterUserSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('wrong password!')
         return attrs
 
-    def validate_email(self,email):
-        if User.objects.filter(email=email).exist():
+    def validate_email(self, email):
+        if User.objects.filter(email=email).exists():
             raise serializers.ValidationError('this email already exist!')
         return email
 
@@ -38,19 +38,21 @@ class ChangePasswordSerializer(serializers.Serializer):
         return attrs
     def set_new_password(self):
         user = self.context.get('request').user
-        password = self.validated_data('new_password')
+        password = self.validated_data.get('new_password')
         user.set_password('password')
         user.save()
+
+
 class ForgotPasswordSerializer(serializers.Serializer):
     email = serializers.EmailField(required=True)
 
     def validate_email(self,email):
-        if not User.objects.filter(email=email).exist():
+        if not User.objects.filter(email=email).exists():
             raise serializers.ValidationError('this email not exist!')
         return email
 
     def send_code(self):
-        email = self.validated_data('email')
+        email = self.validated_data.get('email')
         user = User.objects.get(email=email)
         user.create_activation_code()
         user.save()

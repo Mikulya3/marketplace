@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+import os
 from datetime import timedelta
 
 import dj_database_url
@@ -175,4 +176,24 @@ SWAGGER_SETTINGS = {
             'name': 'Authorization'
         }
     }
+}
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'logfile': {
+            'class': 'logging.FileHandler',
+            'filename': 'server.log',
+        },
+        'console': {
+            'class': 'logging.StreamHandler'
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'logfile'],
+        },
+    },
 }
