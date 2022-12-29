@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework_simplejwt',
     'drf_yasg',
+    'lxml',
 
     #my app
     'applications.account',
@@ -52,7 +53,6 @@ INSTALLED_APPS = [
     'applications.product', 
     'applications.order',
     'applications.feedback',
-
 ]
 
 MIDDLEWARE = [
@@ -161,7 +161,8 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
+    
 }
 
 BROKER_URL = 'redis://127.0.0.1:6379/0'
