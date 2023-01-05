@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
+import os
 from datetime import timedelta
 
 import dj_database_url
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
     'applications.product', 
     'applications.order',
     'applications.feedback',
+    'applications.parcer',
 ]
 
 MIDDLEWARE = [
@@ -160,9 +162,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
+
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 10,
-    
+    'PAGE_SIZE': 3
 }
 
 BROKER_URL = 'redis://127.0.0.1:6379/0'
@@ -177,3 +179,24 @@ SWAGGER_SETTINGS = {
         }
     }
 }
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'logfile': {
+            'class': 'logging.FileHandler',
+            'filename': 'marketplace.log',
+        },
+        'console': {
+            'class': 'logging.StreamHandler'
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'logfile'],
+        },
+    },
+}
+

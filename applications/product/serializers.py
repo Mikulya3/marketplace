@@ -1,3 +1,4 @@
+import random
 from rest_framework import serializers
 from applications.product.models import Category, Product, Image
 
@@ -29,8 +30,7 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         fields = '__all__'
 
-    # def create(self, validated_data):
-    #     return super().create(validated_data)
+
 
     def create(self, validated_data):
         request = self.context.get('request')
