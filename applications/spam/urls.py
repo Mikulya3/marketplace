@@ -6,6 +6,6 @@ router = DefaultRouter()
 
 router.register('', SpamAPIView)
 
-urlpatterns =[
+urlpatterns = [
     path('', include(router.urls))
 ]

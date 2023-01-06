@@ -9,7 +9,7 @@ def send_spam_message_to_users():
     for email in emails:
         send_mail(
             'hi',
-            'this is my site http://localhost:8000',
+            'this is our site http://localhost:8000',
             'kadirbekova43@gmail.com',
             list_email
         )

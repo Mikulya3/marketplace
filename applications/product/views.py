@@ -41,6 +41,7 @@ class RecommendationAPIView(ModelViewSet):
         Product = random.choices(product, k=3)
         return Product
 
+
 class CategoryAPIView(mixins.CreateModelMixin,
                    mixins.RetrieveModelMixin,
                    mixins.DestroyModelMixin,
