@@ -1,3 +1,11 @@
 from django.test import TestCase
+import unittest
 
-# Create your tests here.
+from applications.feedback.views import LikeAPIView, RatingAPIView
+
+class TestLike(unittest.TestCase):
+
+    def setUp(self):
+        self.like = LikeAPIView()
+
+    def 
