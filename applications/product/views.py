@@ -53,4 +53,3 @@ class CategoryAPIView(mixins.CreateModelMixin,
     permission_classes = [IsAuthenticatedOrReadOnly]
 
 
-
