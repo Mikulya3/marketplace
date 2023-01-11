@@ -3,7 +3,8 @@ from django.test import RequestFactory, TestCase
 
 
 
-class Test(TestCase):
+
+class MyTest(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
         self.user = User.objects.create_user(

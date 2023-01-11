@@ -54,7 +54,6 @@ INSTALLED_APPS = [
     'applications.product', 
     'applications.order',
     'applications.feedback',
-    '34.125.60.56',
 ]
 
 MIDDLEWARE = [
